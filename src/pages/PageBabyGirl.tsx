@@ -7,8 +7,10 @@ interface PageBabyGirlProps {
   onOpenPhotoModal?: (src: string, title: string) => void;
 }
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const PageBabyGirl: React.FC<PageBabyGirlProps> = ({ onNextPage, onPrevPage, onOpenPhotoModal }) => {
-  const [photoUrl, setPhotoUrl] = useState<string | null>('/assets/aistudio/2_743c4e43.jpg');
+  const [photoUrl, setPhotoUrl] = useState<string | null>(`${BASE}assets/aistudio/2_743c4e43.jpg`);
 
   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -31,7 +33,7 @@ export const PageBabyGirl: React.FC<PageBabyGirlProps> = ({ onNextPage, onPrevPa
           To My Sweetest Baby Girl Ishika
         </h1>
         <p className="font-handwritten text-xl sm:text-2xl text-rose-600">
-          From the depths of Priyansh&apos;s heart ❤️
+          From the depths of Priyansh's heart ❤️
         </p>
       </div>
 
@@ -95,7 +97,7 @@ export const PageBabyGirl: React.FC<PageBabyGirlProps> = ({ onNextPage, onPrevPa
         {/* Paragraph 3: Exact words */}
         <div className="p-6 rounded-2xl bg-rose-50/50 border border-rose-200/70 text-center">
           <p className="text-base sm:text-lg text-rose-950 font-medium leading-relaxed font-sans">
-            I would go to any lengths for Ishika. She is the oxygen of my life, and I can&apos;t imagine my life without her, not even for a moment. ❤️🥹
+            I would go to any lengths for Ishika. She is the oxygen of my life, and I can't imagine my life without her, not even for a moment. ❤️🥹
           </p>
         </div>
 
