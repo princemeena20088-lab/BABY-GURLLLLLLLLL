@@ -9,6 +9,19 @@ interface PageBabyGirlProps {
 
 const BASE = import.meta.env.BASE_URL || '/';
 
+const rawAssetFallback = (src: string) => {
+  const filename = src.split('/').pop()?.split('?')[0];
+  return filename ? `https://raw.githubusercontent.com/princemeena20088-lab/BABY-GURLLLLLLLLL/main/public/assets/aistudio/${filename}` : src;
+};
+
+const handleAssetImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+  const image = e.currentTarget;
+  if (image.dataset.fallbackApplied || !image.src.includes('/assets/aistudio/')) return;
+  image.dataset.fallbackApplied = 'true';
+  image.src = rawAssetFallback(image.src);
+};
+
+
 export const PageBabyGirl: React.FC<PageBabyGirlProps> = ({ onNextPage, onPrevPage, onOpenPhotoModal }) => {
   const [photoUrl, setPhotoUrl] = useState<string | null>(`${BASE}assets/aistudio/2_743c4e43.jpg`);
 
@@ -122,6 +135,7 @@ export const PageBabyGirl: React.FC<PageBabyGirlProps> = ({ onNextPage, onPrevPa
             >
               <img
                 src={photoUrl}
+                    onError={handleAssetImageError}
                 alt="My Sweetest Baby"
                 referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-300"
