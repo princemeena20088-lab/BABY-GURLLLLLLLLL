@@ -25,6 +25,19 @@ interface PageMemoriesProps {
 
 const BASE = import.meta.env.BASE_URL || '/';
 
+const rawAssetFallback = (src: string) => {
+  const filename = src.split('/').pop()?.split('?')[0];
+  return filename ? `https://raw.githubusercontent.com/princemeena20088-lab/BABY-GURLLLLLLLLL/main/public/assets/aistudio/${filename}` : src;
+};
+
+const handleAssetImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+  const image = e.currentTarget;
+  if (image.dataset.fallbackApplied || !image.src.includes('/assets/aistudio/')) return;
+  image.dataset.fallbackApplied = 'true';
+  image.src = rawAssetFallback(image.src);
+};
+
+
 export const PageMemories: React.FC<PageMemoriesProps> = ({
   onOpenPhotoModal,
   onOpenUploadModal,
@@ -260,6 +273,7 @@ export const PageMemories: React.FC<PageMemoriesProps> = ({
                         >
                           <img
                             src={chat.filePath}
+                    onError={handleAssetImageError}
                             alt={chat.title}
                             referrerPolicy="no-referrer"
                             className="max-h-[480px] w-auto object-contain group-hover:scale-102 transition-transform duration-300"
@@ -347,6 +361,7 @@ export const PageMemories: React.FC<PageMemoriesProps> = ({
                 >
                   <img
                     src={currentSrc}
+                    onError={handleAssetImageError}
                     alt={item.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
