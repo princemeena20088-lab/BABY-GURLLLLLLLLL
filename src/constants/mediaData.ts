@@ -1,5 +1,7 @@
 import { MediaItem } from '../types';
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
   {
     id: 1,
@@ -7,7 +9,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'Our Sweet Kisses',
     subtitle: 'Kiss Photo 💋',
-    filePath: '/assets/aistudio/1_70a35d3a.jpg',
+    filePath: `${BASE}assets/aistudio/1_70a35d3a.jpg`,
   },
   {
     id: 2,
@@ -15,7 +17,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'My Sweetest Baby',
     subtitle: 'Sweet Photo 🎀',
-    filePath: '/assets/aistudio/2_743c4e43.jpg',
+    filePath: `${BASE}assets/aistudio/2_743c4e43.jpg`,
   },
   {
     id: 3,
@@ -23,7 +25,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'My Funny Ishika',
     subtitle: 'Funny Photo 😂',
-    filePath: '/assets/aistudio/3_f16c48a9.jpg',
+    filePath: `${BASE}assets/aistudio/3_f16c48a9.jpg`,
   },
   {
     id: 4,
@@ -31,7 +33,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'I Will Always Stand Beside You',
     subtitle: 'Together Forever ❤️',
-    filePath: '/assets/aistudio/4_5d74e873.jpg',
+    filePath: `${BASE}assets/aistudio/4_5d74e873.jpg`,
   },
   {
     id: 5,
@@ -39,7 +41,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'Our Cute Cat Moment',
     subtitle: 'Me With Cat 🐱',
-    filePath: '/assets/aistudio/5_233baf3f.jpg',
+    filePath: `${BASE}assets/aistudio/5_233baf3f.jpg`,
   },
   {
     id: 6,
@@ -47,7 +49,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'Your Beautiful Smile',
     subtitle: 'Smiling Ishika 🥹',
-    filePath: '/assets/aistudio/6_01b504d4.jpg',
+    filePath: `${BASE}assets/aistudio/6_01b504d4.jpg`,
   },
   {
     id: 7,
@@ -55,7 +57,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'Our Sweet Memories',
     subtitle: 'Our Sweet Time 💗',
-    filePath: '/assets/aistudio/7_ea540dd4.jpg',
+    filePath: `${BASE}assets/aistudio/7_ea540dd4.jpg`,
   },
   {
     id: 8,
@@ -63,7 +65,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'My Naughty Ishika',
     subtitle: 'Hawsi Ishika 😋',
-    filePath: '/assets/aistudio/8_bc54338f.jpg',
+    filePath: `${BASE}assets/aistudio/8_bc54338f.jpg`,
   },
   {
     id: 9,
@@ -71,7 +73,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'Our Together Time',
     subtitle: 'Sitting Together 🫶',
-    filePath: '/assets/aistudio/9_fd457f15.jpg',
+    filePath: `${BASE}assets/aistudio/9_fd457f15.jpg`,
   },
   {
     id: 10,
@@ -79,7 +81,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'A Little Flower For My Love',
     subtitle: 'Flower With Romantic Theme 🌹',
-    filePath: '/assets/aistudio/10_119004e1.jpg',
+    filePath: `${BASE}assets/aistudio/10_119004e1.jpg`,
   },
   {
     id: 11,
@@ -87,7 +89,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'video',
     title: 'Our Sweet Memory Video 🎬❤️',
     subtitle: 'NO PHOTO — Personal Edited Video',
-    filePath: '/assets/aistudio/11_68c36dc9.mp4',
+    filePath: `${BASE}assets/aistudio/11_68c36dc9.mp4`,
   },
   {
     id: 12,
@@ -95,7 +97,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'Our Special Moment',
     subtitle: 'Additional Photo / Memory Video Placement',
-    filePath: '/assets/aistudio/12_4ba0766b.jpg',
+    filePath: `${BASE}assets/aistudio/12_4ba0766b.jpg`,
   },
   {
     id: 13,
@@ -103,7 +105,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'photo',
     title: 'My Cutie, Let Me Pull Your Cheeks',
     subtitle: 'Cheek Pulling Photo 🥹',
-    filePath: '/assets/aistudio/13_a4f3553b.jpg',
+    filePath: `${BASE}assets/aistudio/13_a4f3553b.jpg`,
   },
   {
     id: 14,
@@ -111,7 +113,7 @@ export const INITIAL_MEDIA_SEQUENCE: MediaItem[] = [
     type: 'screenshot',
     title: 'Our Chat Screenshots 💌',
     subtitle: '2 Cute Conversations Gallery',
-    filePath: '/assets/aistudio/14_cb980f09.jpg',
+    filePath: `${BASE}assets/aistudio/14_cb980f09.jpg`,
   },
 ];
 
@@ -120,12 +122,12 @@ export const CHAT_SCREENSHOTS = [
     id: 'chat-1',
     title: 'Hawsi Ishika Chat 😋💬',
     caption: 'Kyu tu meri plate se chori kregana...',
-    filePath: '/assets/aistudio/14_cb980f09.jpg',
+    filePath: `${BASE}assets/aistudio/14_cb980f09.jpg`,
   },
   {
     id: 'chat-2',
     title: 'Ragad Du? NhinAwww 🥰',
     caption: 'Aww kitni cute he... Ragad du?',
-    filePath: '/assets/aistudio/8_bc54338f.jpg',
+    filePath: `${BASE}assets/aistudio/8_bc54338f.jpg`,
   },
 ];
