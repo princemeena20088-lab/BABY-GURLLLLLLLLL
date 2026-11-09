@@ -7,8 +7,10 @@ interface PagePromisesProps {
   onOpenPhotoModal?: (src: string, title: string) => void;
 }
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const PagePromises: React.FC<PagePromisesProps> = ({ onNextPage, onPrevPage, onOpenPhotoModal }) => {
-  const [photoUrl, setPhotoUrl] = useState<string | null>('/assets/aistudio/4_5d74e873.jpg');
+  const [photoUrl, setPhotoUrl] = useState<string | null>(`${BASE}assets/aistudio/4_5d74e873.jpg`);
 
   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -31,7 +33,7 @@ export const PagePromises: React.FC<PagePromisesProps> = ({ onNextPage, onPrevPa
           Forever Promises to Ishika
         </h1>
         <p className="font-handwritten text-xl sm:text-2xl text-rose-600">
-          Pure loyalty, eternal love &amp; respect ❤️✨
+          Pure loyalty, eternal love & respect ❤️✨
         </p>
       </div>
 
@@ -52,7 +54,7 @@ export const PagePromises: React.FC<PagePromisesProps> = ({ onNextPage, onPrevPa
           <div className="flex items-start gap-3">
             <span className="text-2xl mt-1">❤️</span>
             <p className="text-base sm:text-lg text-rose-950 font-medium leading-relaxed font-sans">
-              Ishika, I&apos;m saying this with all my heart and with the most genuine feelings. I truly want only you. I don&apos;t need anyone else because you are the one I choose, every single day. ❤️
+              Ishika, I'm saying this with all my heart and with the most genuine feelings. I truly want only you. I don't need anyone else because you are the one I choose, every single day. ❤️
             </p>
           </div>
         </div>
@@ -62,7 +64,7 @@ export const PagePromises: React.FC<PagePromisesProps> = ({ onNextPage, onPrevPa
           <div className="flex items-start gap-3">
             <ShieldCheck className="w-6 h-6 text-rose-500 shrink-0 mt-1" />
             <p className="text-base sm:text-lg text-slate-800 font-medium leading-relaxed font-sans">
-              I&apos;m not the kind of guy who has a girlfriend but still seeks attention from other girls. I believe in loyalty, honesty and giving my girl the love and respect she deserves. I know every person is different, but I want to show you through my actions that you can trust me.
+              I'm not the kind of guy who has a girlfriend but still seeks attention from other girls. I believe in loyalty, honesty and giving my girl the love and respect she deserves. I know every person is different, but I want to show you through my actions that you can trust me.
             </p>
           </div>
         </div>
@@ -72,7 +74,7 @@ export const PagePromises: React.FC<PagePromisesProps> = ({ onNextPage, onPrevPa
           <div className="flex items-start gap-3">
             <span className="text-2xl mt-1">🥹</span>
             <p className="text-base sm:text-lg text-rose-950 font-semibold leading-relaxed font-sans">
-              After all, I&apos;m your sweet little baby, and I just want to be yours, make you happy and build a beautiful future together. 🥹❤️💋
+              After all, I'm your sweet little baby, and I just want to be yours, make you happy and build a beautiful future together. 🥹❤️💋
             </p>
           </div>
         </div>
