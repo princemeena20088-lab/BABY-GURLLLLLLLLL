@@ -13,6 +13,7 @@ import { PageSpecials } from './pages/PageSpecials';
 import { Heart } from 'lucide-react';
 
 const THEMES: ThemeMode[] = ['pink', 'blue', 'peach'];
+const BASE = import.meta.env.BASE_URL || '/';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('page1');
@@ -194,7 +195,7 @@ export default function App() {
       />
 
       {/* Dedicated Romantic Background Music Player (Persistent, loops, no random music) */}
-      <MusicPlayer defaultAudioSrc="/assets/aistudio/Ve_Haaniyaan_-_Official_Video_Ravi_Dubey_Sargun_Mehta_Danny_Avvy_Sra_Dreamiyata_Music__1__1dd54d88.mp3" />
+      <MusicPlayer defaultAudioSrc={`${BASE}assets/aistudio/Ve_Haaniyaan_-_Official_Video_Ravi_Dubey_Sargun_Mehta_Danny_Avvy_Sra_Dreamiyata_Music__1__1dd54d88.mp3`} />
 
       {/* Footer */}
       <footer className="w-full py-8 border-t border-rose-100 bg-white/70 backdrop-blur-xs text-center relative z-10 mt-12">
