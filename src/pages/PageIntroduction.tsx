@@ -8,11 +8,13 @@ interface PageIntroductionProps {
   onOpenPhotoModal?: (src: string, title: string) => void;
 }
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const PageIntroduction: React.FC<PageIntroductionProps> = ({ onNextPage, onOpenPhotoModal }) => {
   const [isOpened, setIsOpened] = useState(false);
   const [kissCount, setKissCount] = useState(0);
   const [kisses, setKisses] = useState<{ id: number; x: number; y: number }[]>([]);
-  const [customPhoto, setCustomPhoto] = useState<string | null>('/assets/aistudio/1_70a35d3a.jpg');
+  const [customPhoto, setCustomPhoto] = useState<string | null>(`${BASE}assets/aistudio/1_70a35d3a.jpg`);
 
   const handleOpenBox = (e: React.MouseEvent) => {
     if (!isOpened) {
