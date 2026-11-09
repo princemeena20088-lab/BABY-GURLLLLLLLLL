@@ -23,6 +23,8 @@ interface PageMemoriesProps {
   onPrevPage: () => void;
 }
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const PageMemories: React.FC<PageMemoriesProps> = ({
   onOpenPhotoModal,
   onOpenUploadModal,
@@ -30,7 +32,7 @@ export const PageMemories: React.FC<PageMemoriesProps> = ({
   onPrevPage,
 }) => {
   const [mediaList, setMediaList] = useState<MediaItem[]>(INITIAL_MEDIA_SEQUENCE);
-  const [activeVideoSlot, setActiveVideoSlot] = useState<string>('/assets/aistudio/11_68c36dc9.mp4');
+  const [activeVideoSlot, setActiveVideoSlot] = useState<string>(`${BASE}assets/aistudio/11_68c36dc9.mp4`);
   const [customScreenshots, setCustomScreenshots] = useState<string[]>([]);
 
   const handleMediaUpload = (id: number, e: React.ChangeEvent<HTMLInputElement>) => {
@@ -100,7 +102,7 @@ export const PageMemories: React.FC<PageMemoriesProps> = ({
           Our Precious Memories Together
         </h1>
         <p className="font-handwritten text-2xl sm:text-3xl text-rose-600">
-          Strictly ordered memories of Priyansh &amp; Ishika ❤️
+          Strictly ordered memories of Priyansh & Ishika ❤️
         </p>
       </div>
 
@@ -354,7 +356,7 @@ export const PageMemories: React.FC<PageMemoriesProps> = ({
                       <Maximize2 className="w-3.5 h-3.5" /> Full screen
                     </span>
                     <span className="text-xs text-rose-200 font-handwritten text-lg">
-                      Ishika &amp; Priyansh
+                      Ishika & Priyansh
                     </span>
                   </div>
                 </div>
