@@ -12,7 +12,7 @@ export const KissPuzzle: React.FC = () => {
   const [selectedTile, setSelectedTile] = useState<number | null>(null);
   const [moves, setMoves] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [puzzleImage, setPuzzleImage] = useState('/assets/aistudio/1_70a35d3a.jpg');
+  const [puzzleImage, setPuzzleImage] = useState(`${import.meta.env.BASE_URL}assets/aistudio/1_70a35d3a.jpg`);
 
   // Initialize and shuffle
   const initPuzzle = () => {
