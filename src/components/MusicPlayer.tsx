@@ -5,8 +5,10 @@ interface MusicPlayerProps {
   defaultAudioSrc?: string;
 }
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const MusicPlayer: React.FC<MusicPlayerProps> = ({
-  defaultAudioSrc = '/assets/aistudio/Ve_Haaniyaan_-_Official_Video_Ravi_Dubey_Sargun_Mehta_Danny_Avvy_Sra_Dreamiyata_Music__1__1dd54d88.mp3',
+  defaultAudioSrc = `${BASE}assets/aistudio/Ve_Haaniyaan_-_Official_Video_Ravi_Dubey_Sargun_Mehta_Danny_Avvy_Sra_Dreamiyata_Music__1__1dd54d88.mp3`,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [songTitle, setSongTitle] = useState('Ve Haaniyaan · Ravi Dubey & Sargun Mehta');
@@ -150,6 +152,7 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({
           }
         }}
         loop
+        preload="auto"
       />
 
       <input
